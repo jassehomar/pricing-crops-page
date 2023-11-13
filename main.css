@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #27292b;
+  color: #f3f4f6;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1140px;
+  width: 100%;
+  margin-inline: auto;
+  min-height: 100vh;
+  padding: 1.5rem 2rem;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+}
+
+.card {
+  border-radius: 5px;
+  background-color: #232526;
+  box-shadow: 5px 8px 25px 5px #1c1e1f;
+  cursor: pointer;
+  width: calc((100% - 4rem) / 3);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card-header {
+  background-color: #2f3133;
+  padding: 2.5rem 1.25rem;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.card-header h2 {
+  color: #facf4e;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card-header p {
+  color: #e1e3e5;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+
+.ribbon {
+  background-color: dodgerblue;
+  box-shadow: 0 5px 8px 0 #232526;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  position: absolute;
+  right: -30%;
+  top: 30px;
+  transform: rotate(45deg);
+  width: 100%;
+}
+
+.basic-price-wrapper {
+  background-color: #41a9f7;
+}
+
+.standard-price-wrapper {
+  background-color: #b26ffe;
+}
+
+.enterprise-price-wrapper {
+  background-color: #e45257;
+}
+
+.price {
+  color: #f9fafb;
+}
+
+.price > span {
+  font-weight: 700;
+  font-size: 1.525rem;
+}
+
+.card-body {
+  padding: 2rem 1.5rem;
+}
+
+.card-body ul {
+  list-style: none;
+}
+
+.card-body ul li {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  gap: 0.75rem;
+}
+
+.card-body li img {
+  width: 30px;
+}
+
+.button-wrapper {
+  margin-top: 3rem;
+}
+
+.button-wrapper button {
+  background-color: #1c1e1f;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  color: #facf4e;
+  cursor: pointer;
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  padding: 1rem 2rem;
+  width: 100%;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.3s ease-in-out;
+}
+
+.button-wrapper button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 8px -6px #facf4e;
+  border-color: #facf4e;
+}
+
+@media (max-width: 992px) {
+  .card {
+    width: calc((100% - 2rem) / 2);
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: 100%;
+  }
+}
